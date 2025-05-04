@@ -60,28 +60,63 @@ const Register = () => {
   };
 
   return (
-    <div className="auth-page">
-      {/* Fixed Navbar */}
-      <nav className="navbar-override" style={{ backgroundColor: '#6200ea' }}>
-        <div>
-          <div className="d-flex align-items-center">
-            <i className="fas fa-wallet text-white" style={{ marginRight: '0.5rem' }}></i>
-            <span className="text-white fs-4 fw-bold">PocketWise</span>
+    <div className="auth-page" style={{ width: '100%', display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      {/* Navbar */}
+      <div style={{ 
+        width: '100%', 
+        backgroundColor: '#6200ea',
+        padding: '1rem 0'
+      }}>
+        <div style={{ 
+          maxWidth: '1200px', 
+          margin: '0 auto',
+          padding: '0 2rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <i className="fas fa-wallet me-2 text-white"></i>
+            <span className="fw-bold fs-4 text-white">PocketWise</span>
           </div>
-          <div className="navbar-buttons">
-            <Link to="/login" className="navbar-button btn-outline-light">
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <Link 
+              to="/login" 
+              className="btn"
+              style={{
+                backgroundColor: 'transparent',
+                color: 'white',
+                border: '1px solid white',
+                padding: '0.5rem 1.5rem',
+                borderRadius: '0.25rem',
+                fontWeight: '500',
+                textDecoration: 'none'
+              }}
+            >
               Login
             </Link>
-            <Link to="/register" className="navbar-button btn-light">
+            <Link 
+              to="/register" 
+              className="btn"
+              style={{
+                backgroundColor: 'white',
+                color: '#6200ea',
+                border: 'none',
+                padding: '0.5rem 1.5rem',
+                borderRadius: '0.25rem',
+                fontWeight: '500',
+                textDecoration: 'none'
+              }}
+            >
               Register
             </Link>
           </div>
         </div>
-      </nav>
+      </div>
 
-      {/* Rest of your content stays the same */}
+      {/* Main Content */}
       <div className="container-fluid" style={{ flex: 1, display: 'flex', padding: 0 }}>
-        <div className="row w-100 g-0">
+        <div className="row w-100 g-0" style={{ height: '100%' }}>
           {/* Left Section - Features */}
           <div className="col-md-7 p-4" style={{ backgroundColor: '#6200ea', color: 'white' }}>
             <div className="p-3">
